@@ -1,0 +1,23 @@
+
+
+.nav-item a{
+    color : white !important;
+}
+
+li:hover{
+    background-color: #712cf9;
+    color: white !important;
+}
+
+a{
+    text-decoration: none !important;
+}
+
+a:hover {
+    background-color: #712cf9;
+    color: white !important;
+}
+
+.active{
+   border-bottom: 3px solid blue !important; 
+}
