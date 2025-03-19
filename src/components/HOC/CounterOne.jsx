@@ -1,19 +1,17 @@
-import React from "react";
-import WithHOC from "./HOC";
+import React from 'react'
+import WithHOC from './WithHOC'
 
-const CounterOne = ({ count, setCount }) => {
+const CounterOne = (props) => {
+  console.log(props)
+  
   return (
     <div>
-      <h1>CounterOne</h1>
-      <h1>{count}</h1>
-      <button
-        onClick={() => setCount((count) => count + 1)}
-        className="btn btn-success"
-      >
-        Increment
-      </button>
+      <h2>CounterOne</h2>
+      <h3>Count: {props.count}</h3>
+      <button onClick={() => props.increment(1)}>Increment</button>
+      <button onClick={props.decrement}>Decrement</button>
     </div>
-  );
-};
+  )
+}
 
-export default WithHOC(CounterOne);
+export default WithHOC(CounterOne)
