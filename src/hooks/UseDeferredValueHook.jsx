@@ -1,33 +1,40 @@
-import React, { useDeferredValue } from 'react'
+import React, { useDeferredValue, useState } from "react";
 
 const UseDeferredValueHook = () => {
-  const [inputValue, setInputValue] = React.useState('')
-  const [data, setData] = React.useState([])
-  const deferredValue = useDeferredValue(data)
+  const [inputValue, setInputValue] = useState("");
+  const [data, setData] = useState([]);
 
-  const handleChange = (e) => {
-    setInputValue(e.target.value)
+  let deferData = useDeferredValue(data)
+
+  let getInputValue = (e) => {
+    setInputValue(e.target.value);
+
     let list = [];
-    for(let i = 0; i < 30000; i++) {
-      list.push(inputValue)
+    for (let i = 0; i < 30000; i++) {
+      list.push(inputValue);
     }
-    setData(list)
+    setData(list);
   }
-  return (
-    <div className='container mt-5 offset-3'>
-      <div className="form-group">
-        <label htmlFor="">Enter a text</label>
-        <input type="text" value={inputValue} onChange={(e) => handleChange(e) } />
-      </div>
 
+  return (
+    <div className="container mt-5 off-set-4">
+      <div className="form-group">
+        <input
+          type="text"
+          className="form-control"
+          value={inputValue}
+          onChange={(e) => getInputValue(e)}
+        />
+      </div>
       <ul>
-        {deferredValue.map((item, index) => (
-          <li key={index}>{item}</li>
-        ))}
+        {
+          deferData.map((ele,i) => (
+            <li key={i}>{ele}</li>
+          ))
+        }
       </ul>
     </div>
-  )
-}
+  );
+};
 
-
-export default UseDeferredValueHook
+export default UseDeferredValueHook;

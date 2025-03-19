@@ -59,6 +59,9 @@ const Navbar = () => {
             <li className="nav-link">
               <NavLink to="react-testing">React Testing</NavLink>{" "}
             </li>
+            <li className="nav-link">
+              <NavLink to="custom-hook">customHook</NavLink>{" "}
+            </li>
           </ul>
         </div>
       </div>

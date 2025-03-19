@@ -19,6 +19,9 @@ import HOCNav from "../pages/HOCNav";
 // import CounterTwo from "../components/HOC/CounterTwo";
 // import PortalComp from "../components/PortalComp";
 import ReduxNav from "../pages/ReduxNav";
+import TodoApi from "../hooks/CustomHook/TodoApi";
+import UserApi from "../hooks/CustomHook/UserApi";
+import CustomHookNav from "../pages/CustomHookNav";
 // import TodoComp from "../components/redux-toolkit/TodoComp";
 // import ReactVirtualization from "../components/ReactVirtualization";
 // import ContextAPI from "../hooks/ContextAPI";
@@ -148,6 +151,24 @@ const AppRoutes = () => {
     {
       path : 'virutalization',
       element : <ReactVirtualization />
+    },
+    {
+      path : 'custom-hook',
+      element : <CustomHookNav />,
+      children : [
+        {
+          path : '/custom-hook',
+          element : <Navigate to="todo-api" />
+        },
+        {
+          path : 'todo-api',
+          element : <TodoApi />
+        },
+        {
+          path : 'user',
+          element : <UserApi />
+        }
+      ]
     },
     {
       path: "*",
