@@ -22,6 +22,11 @@ import ReduxNav from "../pages/ReduxNav";
 import TodoApi from "../hooks/CustomHook/TodoApi";
 import UserApi from "../hooks/CustomHook/UserApi";
 import CustomHookNav from "../pages/CustomHookNav";
+import UseFormStateHook from "../hooks/useFormStateHook";
+import UseFormStatusHook from "../hooks/useFormStatusHook";
+import UseActionStateHook from "../hooks/useActionStateHook";
+import UseOptimisticHook from "../hooks/useOptimisticHook";
+import UseHook from "../hooks/useHook";
 // import TodoComp from "../components/redux-toolkit/TodoComp";
 // import ReactVirtualization from "../components/ReactVirtualization";
 // import ContextAPI from "../hooks/ContextAPI";
@@ -104,6 +109,26 @@ const AppRoutes = () => {
         {
           path : 'context-api',
           element : <ContextAPI />
+        },
+        {
+          path : 'useFormState',
+          element : <UseFormStateHook />
+        },
+        {
+          path : 'useFormStatus',
+          element : <UseFormStatusHook />
+        },
+        {
+          path : 'useActionState',
+          element : <UseActionStateHook />
+        },
+        {
+          path : 'useOptimistic',
+          element : <UseOptimisticHook />
+        },
+        {
+          path : 'use',
+          element : <UseHook />
         }
       ],
     },

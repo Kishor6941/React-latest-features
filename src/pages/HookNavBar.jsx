@@ -69,14 +69,38 @@ const HookNavBar = () => {
               </li>
 
               <li className="nav-item">
-                <NavLink className='nav-link' to="use">
-                  use
+                <NavLink className='nav-link' to="context-api">
+                  ContextAPI
                 </NavLink>
               </li>
 
               <li className="nav-item">
-                <NavLink className='nav-link' to="context-api">
-                  ContextAPI
+                <NavLink className='nav-link' to="useFormState">
+                  useFormState
+                </NavLink>
+              </li>
+
+              <li className="nav-item">
+                <NavLink className='nav-link' to="useFormStatus">
+                  useFormStatus
+                </NavLink>
+              </li>
+
+              <li className="nav-item">
+                <NavLink className='nav-link' to="useActionState">
+                  useActionState
+                </NavLink>
+              </li>
+
+              <li className="nav-item">
+                <NavLink className='nav-link' to="useOptimistic">
+                  useOptimistic
+                </NavLink>
+              </li>
+
+              <li className="nav-item">
+                <NavLink className='nav-link' to="use">
+                  use
                 </NavLink>
               </li>
 
