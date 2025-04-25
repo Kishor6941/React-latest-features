@@ -3,9 +3,11 @@ import ReactDOM from "react-dom";
 
 const PortalComp = () => {
     const [isOpen, setIsOpen] = useState(false);
+    const [isLogin, setIsLogin] = useState(false);
   return (
     <div>
       <h1>React Portal Example</h1>
+      <button className="btn btn-primary" onClick={() => setIsLogin(!isLogin)}>{isLogin ? 'Hello Kishor' : 'Login user'}</button>
       <button className="btn btn-outline-primary" onClick={() => setIsOpen(true)}>Open Modal</button>
       <Modal isOpen={isOpen} onClose={() => setIsOpen(false)} />
     </div>
